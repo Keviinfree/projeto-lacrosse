@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Heurísticas de Nielsen</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .sidebar {
+            margin: 0;
+            padding: 0;
+            width: 150px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 12px;
+            text-decoration: none;
+        }
+        .sidebar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+        .sidebar a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+        .content {
+            margin-left: 160px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a class="active" href="#inicio">Home</a>
+        <a href="#heuristicas">Heurísticas</a>
+        <a href="#sobre">Sobre Mim</a>
+        <a href="#relatorio">Relatório</a>
+    </div>
+
+    <div class="content">
+
+        <p><strong>NOME: Luis Eduardo Loureiro Pinho </strong> </p>
+        <p><strong>RA: 22603471</strong></p>
+        <hr>
+
+        <section id="inicio">
+            <h1>10 Heurísticas de Nielsen</h1>
+            <p>Trabalho sobre usabilidade e navegação responsiva em CSS.</p>
+        </section>
+        <section id="heuristicas">
+            <h2>As 10 Heurísticas de Usabilidade</h2>
+            
+            <p><strong>1. Visibilidade do Status do Sistema:</strong> O sistema deve sempre informar ao usuário o que está acontecendo.</p>
+            <p><strong>2. Correspondência com o Mundo Real:</strong> Usar palavras, frases e conceitos familiares ao usuário.</p>
+            <p><strong>3. Controle e Liberdade do Usuário:</strong> Permitir desfazer e refazer ações (saída de emergência).</p>
+            <p><strong>4. Consistência e Padrões:</strong> Seguir as convenções do mercado para não confundir o usuário.</p>
+            <p><strong>5. Prevenção de Erros:</strong> Criar a interface de forma a evitar que o erro aconteça.</p>
+            <p><strong>6. Reconhecimento em Vez de Mapeamento:</strong> Mostrar opções em tela para não sobrecarregar a memória do usuário.</p>
+            <p><strong>7. Flexibilidade e Eficiência de Uso:</strong> Oferecer atalhos para usuários experientes.</p>
+            <p><strong>8. Design Estético e Minimalista:</strong> Exibir apenas informações essenciais.</p>
+            <p><strong>9. Diagnosticar e Recorrer de Erros:</strong> Mensagens de erro claras e que ajudem a resolver o problema.</p>
+            <p><strong>10. Ajuda e Documentação:</strong> Disponibilizar ajuda fácil de pesquisar quando necessário.</p>
+        </section>
+        <hr>
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p><strong>Nome:</strong> Luis Eduardo Loureiro Pinho </p>
+            <p><strong>RA:</strong> 22603471 </p>
+        </section>
+        <hr>
+        <section id="relatorio">
+            <h2>Relatório E Referências</h2>
+            <p>Página simplificada utilizando a barra de navegação responsiva (Sidenav) de acordo com o W3Schools.</p>
+            
+            <h3>Referências:</h3>
+            <ul>
+                <li><strong>W3SCHOOLS.</strong> CSS Navbar / Responsive Sidenav. Link: https://www.w3schools.com/howto/howto_css_sidenav_responsive.asp</li>
+                <li><strong>NN/g.</strong> 10 Usability Heuristics for User Interface Design. Disponível em: https://www.nngroup.com/articles/ten-usability-heuristics/</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

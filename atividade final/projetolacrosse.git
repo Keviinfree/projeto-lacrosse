@@ -1,0 +1,15 @@
+## Parte D – Referências, IAs Usadas e Ferramentas Aplicadas
+
+### 1. Ferramentas e Tecnologias Aplicadas
+* Visual Studio Code (VS Code): Editor de código-fonte principal, utilizado com as extensões *Live Server* (pré-visualização em tempo real) e *Prettier* (formatação de código).
+* Git e GitHub: Sistema de controle de versão distribuído utilizado para registrar o histórico de commits e hospedar o código-fonte.
+* Google Chrome DevTools: Utilizado para inspeção de elementos, depuração de JavaScript, simulação de dispositivos móveis e auditoria de acessibilidade via **Lighthouse**.
+* WebAIM Contrast Checker: Ferramenta utilizada para validar as razões de contraste das paletas de cores de acordo com as diretrizes WCAG 2.1.
+* Google Fonts: Biblioteca utilizada para importação das famílias tipográficas (*Inter* e *Montserrat*).
+
+### 2. Inteligências Artificiais Utilizadas
+* Google Gemini: Utilizado como ferramenta de apoio técnico na revisão de semântica HTML5, depuração de funções JavaScript.
+
+### 3. Referências Bibliográficas e Técnicas
+* W3C (World Wide Web Consortium). *Web Content Accessibility Guidelines (WCAG)
+* NIELSEN, Jakob. *10 Usability Heuristics for User Interface Design.* Nielsen Norman Group, 1994 

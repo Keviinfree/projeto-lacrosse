@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IHC e Design de Interfaces</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f4f6f8; color: #2c3e50; line-height: 1.6; }
+
+    /* HEADER & NAVEGAÇÃO POR ABAS */
+    header { background: #1a252f; color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    header h1 { font-size: 1.2rem; letter-spacing: 0.5px; }
+    
+    nav { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .tab-btn { background: transparent; border: 1px solid #34495e; color: #ecf0f1; padding: 0.5rem 0.9rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; transition: 0.2s; }
+    .tab-btn:hover { background: #2c3e50; }
+    .tab-btn.active { background: #1abc9c; border-color: #1abc9c; color: #fff; font-weight: 600; }
+
+    /* CONTEÚDO DAS PÁGINAS */
+    main { max-width: 850px; margin: 2rem auto; padding: 0 1rem; }
+    .page { display: none; background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .page.active { display: block; animation: fadeIn 0.3s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+    h2 { color: #1a252f; margin-bottom: 1rem; border-bottom: 2px solid #1abc9c; padding-bottom: 0.4rem; font-size: 1.5rem; }
+    h3 { margin-top: 1.2rem; margin-bottom: 0.5rem; color: #2c3e50; font-size: 1.1rem; }
+    p, ul, ol { margin-bottom: 1rem; font-size: 0.95rem; color: #4a5568; }
+    ul, ol { padding-left: 1.2rem; }
+    li { margin-bottom: 0.4rem; }
+
+    /* ESTILOS ESPECÍFICOS PARA WCAG / PALETAS */
+    .color-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.8rem; margin-top: 1rem; }
+    .color-card { padding: 1rem; border-radius: 6px; text-align: center; font-weight: bold; font-size: 0.85rem; }
+
+    /* FOOTER */
+    footer { text-align: center; padding: 1.5rem; color: #7f8c8d; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>UX/UI & IHC</h1>
+    <nav role="tablist">
+      <button class="tab-btn active" onclick="openTab('ihc', this)">1. IHC</button>
+      <button class="tab-btn" onclick="openTab('dt', this)">2. Design Thinking</button>
+      <button class="tab-btn" onclick="openTab('heuristics', this)">3. Heurísticas</button>
+      <button class="tab-btn" onclick="openTab('wcag', this)">4. WCAG/Cores</button>
+      <button class="tab-btn" onclick="openTab('uxui', this)">5. UX/UI Dev</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1. IHC -->
+    <article id="ihc" class="page active">
+      <h2>1. Interação Humano-Computador (IHC)</h2>
+      <p>IHC é a área que estuda o design, avaliação e implementação de sistemas interativos para uso humano, focando em otimizar a relação entre as pessoas e as tecnologias digitais.</p>
+      <h3>Pilares Fundamentais:</h3>
+      <ul>
+        <li><strong>Usabilidade:</strong> Facilidade de aprendizado, eficiência e prevenção de erros.</li>
+        <li><strong>Acessibilidade:</strong> Garantia de acesso para usuários de diversas capacidades.</li>
+        <li><strong>Modelos Mentais:</strong> Alinhamento entre como o sistema funciona e como o usuário pensa.</li>
+      </ul>
+    </article>
+
+    <!-- 2. DESIGN THINKING -->
+    <article id="dt" class="page">
+      <h2>2. Design Thinking</h2>
+      <p>Uma abordagem centrado no ser humano voltada para a resolução de problemas complexos e inovação técnica.</p>
+      <h3>As 5 Etapas:</h3>
+      <ol>
+        <li><strong>Empatizar:</strong> Compreender os problemas e necessidades reais do usuário.</li>
+        <li><strong>Definir:</strong> Mapear e delimitar o problema principal a ser resolvido.</li>
+        <li><strong>Idear:</strong> Gerar múltiplas ideias e soluções em equipe.</li>
+        <li><strong>Prototipar:</strong> Criar versões operacionais simples da solução (wireframes/drafts).</li>
+        <li><strong>Testar:</strong> Validar os protótipos com usuários finais para coletar feedbacks.</li>
+      </ol>
+    </article>
+
+    <!-- 3. HEURÍSTICAS DE NIELSEN -->
+    <article id="heuristics" class="page">
+      <h2>3. 10 Heurísticas de Usabilidade de Nielsen</h2>
+      <p>Regras práticas fundamentais para avaliação heurística e construção de boas interfaces:</p>
+      <ul>
+        <li>1. Visibilidade do status do sistema</li>
+        <li>2. Correspondência entre o sistema e o mundo real</li>
+        <li>3. Controle e liberdade do usuário (botão desfazer)</li>
+        <li>4. Consistência e padrões</li>
+        <li>5. Prevenção de erros</li>
+        <li>6. Reconhecimento em vez de lembrança</li>
+        <li>7. Flexibilidade e eficiência de uso (atalhos)</li>
+        <li>8. Design estético e minimalista</li>
+        <li>9. Ajuda para reconhecer, diagnosticar e recuperar de erros</li>
+        <li>10. Ajuda e documentação</li>
+      </ul>
+    </article>
+
+    <!-- 4. WCAG E PALETAS DE CORES -->
+    <article id="wcag" class="page">
+      <h2>4. WCAG e Paletas de Cores</h2>
+      <p>As <em>Web Content Accessibility Guidelines</em> (WCAG) definem padrões internacionais de acessibilidade para a web. No design visual, o contraste adequado de cores garante legibilidade universal.</p>
+      
+      <h3>Taxa de Contraste Recomendada (WCAG AA):</h3>
+      <div class="color-grid">
+        <div class="color-card" style="background:#1a252f; color:#ffffff;">Escuro / Branco<br>Ratio 14:1 (Aprovado)</div>
+        <div class="color-card" style="background:#1abc9c; color:#ffffff;">Verde / Branco<br>Ratio 4.5:1 (Aprovado)</div>
+        <div class="color-card" style="background:#f4f6f8; color:#2c3e50;">Cinza / Escuro<br>Ratio 10:1 (Aprovado)</div>
+      </div>
+    </article>
+
+    <!-- 5. UX/UI EM DEV -->
+    <article id="uxui" class="page">
+      <h2>5. UX/UI no Desenvolvimento de Interfaces</h2>
+      <p>Integração das disciplinas de experiência e interface durante a escrita de código front-end:</p>
+      <ul>
+        <li><strong>UX (User Experience):</strong> Garante arquitetura clara, fluxos lógicos e ausência de atritos na jornada do usuário.</li>
+        <li><strong>UI (User Interface):</strong> Aplica hierarquia visual, espaçamentos coerentes, tipografia legível e padrões visuais.</li>
+        <li><strong>Práticas em Dev:</strong> Uso de componentes reutilizáveis, design responsivo (Mobile-First) e feedback imediato de ações (`hover`, `active`, estados de carregamento).</li>
+      </ul>
+    </article>
+  </main>
+
+  <footer>
+    <p>Mateus Melo Santiago Dias — RA: 22601337</p>
+  </footer>
+
+  <script>
+    function openTab(pageId, btn) {
+      // Esconde todas as páginas e remove classe ativa dos botões
+      document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      
+      // Exibe a página selecionada e ativa o botão correto
+      document.getElementById(pageId).classList.add('active');
+      btn.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

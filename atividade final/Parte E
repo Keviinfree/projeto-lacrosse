@@ -1,0 +1,174 @@
+## Parte E – HTML, CSS, JS e Sumarização do Código
+
+### 1. Sumarização do Trabalho
+O projeto consolida os fundamentos de Desenvolvimento de Interfaces Front-End utilizando exclusivamente tecnologias web padrão (**HTML5, CSS3 e JavaScript Vanilla**), 
+sem dependência de bibliotecas pesadas, garantindo carregamento rápido e controle total sobre o DOM. A arquitetura foi dividida em:
+* **`index.html`:** Página principal contendo barra de acessibilidade, carrossel, abas de pesquisa, cartões explicativos e formulário de contato.
+* **`login.html`:** Página dedicada à autenticação de usuários com alternância de visibilidade de senha e suporte aos mesmos recursos de acessibilidade.
+* **`style.css`:** Folha de estilos modularizada com variáveis CSS para temas claro/escuro, escalonamento dinâmico de fontes (`rem`) e layouts responsivos.
+* **`script.js`:** Controlador de eventos responsável pelo carrossel, navegação por abas, persistência de preferências do usuário e validação de formulários.
+
+---
+
+### 2. Arquivo `index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lacrosse Brasil | Esporte, Estratégia e Comunidade</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Barra de Acessibilidade -->
+  <div class="accessibility-bar" role="region" aria-label="Controles de Acessibilidade">
+    <div class="container flex-between">
+      <span>Acessibilidade:</span>
+      <div class="acc-controls">
+        <button id="font-decrease" aria-label="Diminuir tamanho da fonte">A-</button>
+        <button id="font-reset" aria-label="Restaurar tamanho da fonte">A</button>
+        <button id="font-increase" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button id="theme-toggle" aria-label="Alternar modo claro e escuro">🌙 Modo Escuro</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cabeçalho Principal -->
+  <header class="main-header">
+    <div class="container flex-between">
+      <a href="index.html" class="logo">LACROSSE<span>BR</span></a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="#carrossel">Início</a></li>
+          <li><a href="#pesquisa-abas">Sobre o Esporte</a></li>
+          <li><a href="#posicoes">Posições</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="login.html" class="btn-nav">Área do Atleta</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Seção Carrossel de Imagens -->
+    <section id="carrossel" class="carousel-section" aria-label="Destaques do Lacrosse">
+      <div class="carousel-container">
+        <div class="carousel-slide active">
+          <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=1200&q=80" alt="Jogadores de Lacrosse em disputa de bola no campo gramado">
+          <div class="carousel-caption">
+            <h1>O Esporte Mais Rápido Sobre Dois Pés</h1>
+            <p>Conheça a história, a técnica e a expansão do Lacrosse no Brasil.</p>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="https://images.unsplash.com/photo-1519766304817-4f37bda74a26?auto=format&fit=crop&w=1200&q=80" alt="Equipamentos oficiais de Lacrosse: capacete, luvas e stick">
+          <div class="carousel-caption">
+            <h2>Precisão, Agilidade e Trabalho em Equipe</h2>
+            <p>Domine o manuseio do stick e as estratégias de ataque e defesa.</p>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1200&q=80" alt="Equipe comemorando após partida oficial">
+          <div class="carousel-caption">
+            <h2>Faça Parte Dessa Comunidade</h2>
+            <p>Participe dos treinos abertos e campeonatos universitários.</p>
+          </div>
+        </div>
+        <button class="carousel-btn prev" id="prev-slide" aria-label="Slide anterior">&#10094;</button>
+        <button class="carousel-btn next" id="next-slide" aria-label="Próximo slide">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Seção de Abas de Pesquisa -->
+    <section id="pesquisa-abas" class="section container">
+      <h2 class="section-title">Explore o Lacrosse</h2>
+      <div class="tabs-header" role="tablist">
+        <button class="tab-btn active" role="tab" aria-selected="true" data-tab="historia">História</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-tab="regras">Regras Básicas</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-tab="equipamentos">Equipamentos</button>
+      </div>
+      <div class="tabs-content">
+        <div class="tab-pane active" id="historia">
+          <h3>Origem Indígena e Evolução Moderna</h3>
+          <p>O Lacrosse originou-se entre os povos indígenas da América do Norte há séculos, sendo conhecido como "O Jogo do Criador". Hoje é um esporte olímpico reconhecido pela agilidade e intensidade tática.</p>
+        </div>
+        <div class="tab-pane" id="regras">
+          <h3>Dinâmica de Jogo</h3>
+          <p>Disputado por duas equipes de 10 jogadores cada (no formato de campo). O objetivo é utilizar o stick com rede para carregar, passar e arremessar a bola de borracha rumo ao gol adversário.</p>
+        </div>
+        <div class="tab-pane" id="equipamentos">
+          <h3>Proteção e Precisão</h3>
+          <p>Os atletas utilizam o stick (crosse), capacete com grade facial, luvas acolchoadas, ombreiras e protetores de braço para garantir segurança total nos contatos físicos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Cartões Explicativos -->
+    <section id="posicoes" class="section container">
+      <h2 class="section-title">Posições em Campo</h2>
+      <div class="cards-grid">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=600&q=80" alt="Atacante preparando arremesso">
+          <div class="card-body">
+            <h3>Atacantes (Attack)</h3>
+            <p>Focados na finalização e criação de jogadas ofensivas próximas ao gol adversário, utilizando sticks curtos para maior agilidade.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80" alt="Meio-campista em transição rápida">
+          <div class="card-body">
+            <h3>Meio-Campistas (Midfield)</h3>
+            <p>Atuam em toda a extensão do campo, realizando a transição entre defesa e ataque e disputando o face-off inicial.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=600&q=80" alt="Defensor marcando o adversário">
+          <div class="card-body">
+            <h3>Defensores (Defense)</h3>
+            <p>Protegem a zona defensiva utilizando sticks longos (até 1,80m) para interceptar passes e bloquear avanços.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="section container">
+      <h2 class="section-title">Agende um Treino Experimental</h2>
+      <form id="contact-form" class="form-box" novalidate>
+        <div class="form-group">
+          <label for="nome">Nome Completo *</label>
+          <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail *</label>
+          <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem ou Experiência Prévia *</label>
+          <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Conte-nos seu interesse no esporte..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Enviar Inscrição</button>
+        <p id="form-feedback" class="feedback-msg" role="alert"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="main-footer">
+    <div class="container flex-between">
+      <div>
+        <p><strong>Lacrosse Brasil</strong> – Projeto Final de Desenvolvimento de Interfaces (2/2026)</p>
+        <p>Desenvolvido por Luis Eduardo Loureiro Pinho | RA: 22603471</p>
+      </div>
+      <div>
+        <a href="https://github.com/luiseduardopinho/portifolioHUB" target="_blank" rel="noopener noreferrer">Repositório no GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

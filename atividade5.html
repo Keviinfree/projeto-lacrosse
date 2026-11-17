@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabalho de IHC e UX/UI - Luis Eduardo</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* BARRA LATERAL (SIDEBAR) */
+    .sidebar {
+      margin: 0;
+      padding: 0;
+      width: 200px;
+      background-color: #2c3e50;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+    }
+
+    .sidebar h3 {
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      margin: 0;
+      font-size: 16px;
+      background-color: #1a252f;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #ecf0f1;
+      padding: 12px 16px;
+      text-decoration: none;
+      font-size: 14px;
+      border-bottom: 1px solid #34495e;
+    }
+
+    .sidebar a:hover {
+      background-color: #1abc9c;
+      color: white;
+    }
+
+    /* CONTEÚDO PRINCIPAL */
+    .content {
+      margin-left: 200px;
+      padding: 30px;
+      max-width: 900px;
+    }
+
+    .header-info {
+      background: #fff;
+      padding: 15px 20px;
+      border-radius: 8px;
+      border-left: 5px solid #1abc9c;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+    }
+
+    section {
+      background: #fff;
+      padding: 25px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+      margin-top: 0;
+    }
+
+    ol, ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .img-container {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .img-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .palette-demo {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .color-box {
+      padding: 15px;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      text-align: center;
+      flex: 1;
+    }
+
+    /* RESPONSIVO PARA CELULARES */
+    @media screen and (max-width: 700px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+      .sidebar a { float: left; }
+      div.content { margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVEGAÇÃO LATERAL -->
+  <div class="sidebar">
+    <h3>MENU</h3>
+    <a href="#ihc">1. IHC</a>
+    <a href="#design-thinking">2. Design Thinking</a>
+    <a href="#heuristicas">3. Heurísticas</a>
+    <a href="#wcag">4. WCAG & Cores</a>
+    <a href="#ux-ui">5. UX/UI no Dev</a>
+    <a href="#referencias">Referências</a>
+  </div>
+
+  <!-- CONTEÚDO -->
+  <div class="content">
+
+    <!-- CABEÇALHO DO ALUNO -->
+    <div class="header-info">
+      <p style="margin: 0;"><strong>Nome:</strong> Luis Eduardo Loureiro Pinho</p>
+      <p style="margin: 5px 0 0 0;"><strong>RA:</strong> 22603471</p>
+    </div>
+
+    <!-- TEMA 1: IHC -->
+    <section id="ihc">
+      <h1>1. Interação Humano-Computador (IHC)</h1>
+      <p>A IHC é um campo multidisciplinar dedicado a tornar os sistemas computacionais fáceis e intuitivos de usar. O conceito ganhou força na década de 1980 com o surgimento dos computadores pessoais, como o Apple Macintosh, revolucionando a forma como interagimos com a tecnologia.</p>
+      
+      <div class="img-container">
+        <img src="ihc.jpg.jpg" alt="Interação Humano-Computador" onerror="this.style.display='none'">
+      </div>
+
+      <h3>Principais Pilares:</h3>
+      <ol>
+        <li><strong>Usabilidade e Acessibilidade:</strong> Garante que sistemas sejam realmente utilizáveis por todos, sem barreiras.</li>
+        <li><strong>Experiência do Usuário (UX):</strong> Busca criar experiências positivas e engajadoras.</li>
+        <li><strong>Ética e Responsabilidade:</strong> Reflete sobre impactos éticos, privacidade e algoritmos.</li>
+        <li><strong>Inovação:</strong> Suporta novos ambientes como 3D, realidade aumentada e interfaces conversacionais.</li>
+      </ol>
+    </section>
+
+    <!-- TEMA 2: DESIGN THINKING -->
+    <section id="design-thinking">
+      <h2>2. Design Thinking</h2>
+      <p>O Design Thinking é uma abordagem focada nas pessoas para resolver problemas e gerar soluções inovadoras em 5 etapas:</p>
+      <ul>
+        <li><strong>1. Empatizar:</strong> Compreender a fundo as necessidades reais do usuário.</li>
+        <li><strong>2. Definir:</strong> Mapear claramente qual problema precisa ser resolvido.</li>
+        <li><strong>3. Idear:</strong> Fazer reuniões de brainstorm para gerar várias ideias.</li>
+        <li><strong>4. Prototipar:</strong> Criar rasascunhos ou modelos rápidos para testar a ideia.</li>
+        <li><strong>5. Testar:</strong> Validar o protótipo direto com o usuário final.</li>
+      </ul>
+    </section>
+
+    <!-- TEMA 3: HEURÍSTICAS DE NIELSEN -->
+    <section id="heuristicas">
+      <h2>3. As 10 Heurísticas de Nielsen</h2>
+      <ol>
+        <li><strong>Visibilidade do Status do Sistema:</strong> Manter o usuário informado sobre o que acontece.</li>
+        <li><strong>Correspondência com o Mundo Real:</strong> Utilizar linguagem e termos familiares ao usuário.</li>
+        <li><strong>Controle e Liberdade:</strong> Oferecer botões para "desfazer" ou "refazer" ações.</li>
+        <li><strong>Consistência e Padrões:</strong> Manter padrões visuais e de navegação.</li>
+        <li><strong>Prevenção de Erros:</strong> Evitar que o erro aconteça antes de precisar corrigi-lo.</li>
+        <li><strong>Reconhecimento em Vez de Mapeamento:</strong> Deixar opções visíveis na tela.</li>
+        <li><strong>Flexibilidade e Eficiência:</strong> Criar atalhos úteis para usuários avançados.</li>
+        <li><strong>Design Estético e Minimalista:</strong> Mostrar apenas as informações necessárias.</li>
+        <li><strong>Diagnosticar e Recorrer de Erros:</strong> Mensagens de erro claras e objetivas.</li>
+        <li><strong>Ajuda e Documentação:</strong> Manter documentação simples e fácil de consultar.</li>
+      </ol>
+    </section>
+
+    <!-- TEMA 4: WCAG / PALETAS DE CORES -->
+    <section id="wcag">
+      <h2>4. WCAG e Paletas de Cores</h2>
+      <p>As diretrizes do WCAG garantem que o conteúdo seja legível e acessível para pessoas com baixa visão ou daltonismo, exigindo alto contraste entre texto e fundo.</p>
+      
+      <h3>Exemplo de Contraste Recomendado:</h3>
+      <div class="palette-demo">
+        <div class="color-box" style="background-color: #2c3e50;">Fundo Escuro<br>Texto Branco (OK)</div>
+        <div class="color-box" style="background-color: #1abc9c;">Fundo Verde<br>Texto Branco (OK)</div>
+      </div>
+    </section>
+
+    <!-- TEMA 5: UX/UI EM DESENVOLVIMENTO -->
+    <section id="ux-ui">
+      <h2>5. UX/UI no Desenvolvimento de Interfaces</h2>
+      <p>A união entre UX e UI garante o equilíbrio entre funcionalidade e estética durante a criação de softwares:</p>
+      <ul>
+        <li><strong>UX (User Experience):</strong> Foca em como o usuário se sente ao navegar, facilidade e arquitetura da informação.</li>
+        <li><strong>UI (User Interface):</strong> Foca nos elementos visuais, como botões, tipografia, cores e espaçamentos.</li>
+      </ul>
+    </section>
+
+    <!-- REFERÊNCIAS -->
+    <section id="referencias">
+      <h2>Relatório e Referências</h2>
+      <p>Atividade realizada com foco em usabilidade, estrutura limpa em HTML e CSS responsivo.</p>
+      <ul>
+        <li><a href="https://www.figma.com/resource-library/human-computer-interaction/" target="_blank">Figma - Definição de IHC</a></li>
+        <li><a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank">NN/g - 10 Usability Heuristics</a></li>
+        <li><a href="https://www.w3schools.com/howto/howto_css_sidenav_responsive.asp" target="_blank">W3Schools - Responsive Sidenav</a></li>
+      </ul>
+    </section>
+
+  </div>
+
+</body>
+</html>

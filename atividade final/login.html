@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área do Atleta – Login | Lacrosse Brasil</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Barra de Acessibilidade -->
+  <div class="accessibility-bar" role="region" aria-label="Controles de Acessibilidade">
+    <div class="container flex-between">
+      <span>Acessibilidade:</span>
+      <div class="acc-controls">
+        <button id="font-decrease" aria-label="Diminuir fonte">A-</button>
+        <button id="font-reset" aria-label="Fonte padrão">A</button>
+        <button id="font-increase" aria-label="Aumentar fonte">A+</button>
+        <button id="theme-toggle" aria-label="Alternar tema">🌙 Modo Escuro</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="container flex-between">
+      <a href="index.html" class="logo">LACROSSE<span>BR</span></a>
+      <a href="index.html" class="btn-nav">← Voltar ao Início</a>
+    </div>
+  </header>
+
+  <main class="container section login-wrapper">
+    <form id="login-form" class="form-box login-card">
+      <h1>Acesso do Atleta</h1>
+      <p>Entre com suas credenciais para acessar planilhas de treino e calendário.</p>
+      <div class="form-group">
+        <label for="login-email">E-mail Institucional ou Cadastrado</label>
+        <input type="email" id="login-email" required placeholder="atleta@lacrossebr.com">
+      </div>
+      <div class="form-group">
+        <label for="login-senha">Senha</label>
+        <input type="password" id="login-senha" required placeholder="••••••••">
+      </div>
+      <button type="submit" class="btn-primary full-width">Entrar</button>
+      <p id="login-feedback" class="feedback-msg" role="alert"></p>
+    </form>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <p>Lacrosse Brasil – Luis Eduardo Loureiro Pinho (RA: 22603471)</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
